@@ -1,0 +1,314 @@
+/* Global Styles Start */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+/* Global Styles End */
+
+/* Nav Start */
+nav {
+    padding: 25px 0;
+    border-bottom: 1px solid black;
+    width: 80%;
+    margin: auto;
+}
+
+nav .container {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav .small-container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+nav ul a {
+    color: hsl(219, 9%, 45%);
+}
+
+nav ul a:hover {
+    color: hsl(220, 13%, 13%);
+}
+
+nav .icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav .icons .profile {
+    width: 30%;
+}
+
+nav .menu {
+    display: none;
+}
+
+nav .menu button {
+    border: 0;
+    background-color: transparent;
+    display: flex;
+}
+
+@media (max-width: 426px) {
+    nav {
+        position: relative;
+    }
+
+    nav .menu {
+        display: block;
+        display: flex;
+        align-items: center;
+    }
+
+    nav #links {
+        display: none;
+        position: absolute;
+        bottom: -250%;
+        background-color: whitesmoke;
+        width: 100%;
+    }
+
+    nav #links ul {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    nav #links li {
+        width: 100%;
+        padding: 10px 5px;
+        border: 1px solid black;
+    }
+
+    nav .small-container {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 358px) {
+    nav #links {
+        bottom: -300%;
+    }
+}
+/* Nav End */
+
+/* Main Start */
+.main-section {
+    padding: 100px 0;
+}
+
+.main-section .container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-section .images {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-section .thumbnails {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.main-section .thumbnails img {
+    border-radius: 10px;
+}
+
+.main-section .images .main {
+    width: 70%;
+    border-radius: 10px;
+}
+
+.main-section .images img {
+    width: 20%;
+}
+
+.main-section .text {
+    width: 40%;
+}
+
+.main-section .text .small-text h3 {
+    color: hsl(26, 100%, 55%);
+    margin: 20px 0;
+}
+
+.main-section .text .small-text h1 {
+    color: hsl(220, 13%, 13%);
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.main-section .text .small-text p {
+    color: hsl(219, 9%, 45%);
+    margin: 20px 0;
+}
+
+.main-section .text .price {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.main-section .text .price h3 {
+    background-color: hsl(25, 100%, 94%);
+    color: hsl(26, 100%, 55%);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.main-section .text .discount p {
+    margin: 10px 0;
+    color: hsl(220, 14%, 75%);
+    text-decoration: line-through;
+}
+
+.main-section .text .buttons {
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+}
+
+.main-section .text .buttons .add-button {
+    padding: 15px 50px;
+    background-color: hsl(223, 64%, 98%);
+    border: 0;
+    border-radius: 10px;
+    margin-right: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.main-section .text .buttons .add-button .left {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.main-section .text .buttons .add-button .right {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.main-section .text .buttons .cart-button {
+    background-color: hsl(26, 100%, 55%);
+    padding: 15px 100px;
+    width: 310px;
+    display: flex;
+    align-items: center;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    position: relative;
+    text-align: center;
+    gap: 10px;
+}
+
+.main-section .text .buttons .cart-button:hover {
+    background-color: hsl(26, 86%, 51%);
+}
+
+.dot.active {
+    border: 3px solid hsl(26, 100%, 55%);
+    position: relative;
+}
+
+@media (max-width: 426px) {
+    .main-section .container {
+        flex-direction: column;
+    }
+
+    .main-section .images {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main-section .thumbnails {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        position: relative;
+    }
+
+    .main-section .images .main {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .main-section .text {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+    }
+
+    .main-section .text .total-price {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-section .text .buttons {
+        margin: 50px 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 25px;
+        justify-content: center;
+    }
+
+    .main-section .text .buttons .add-button {
+        padding: 15px 50px;
+        width: 310px;
+        background-color: hsl(223, 64%, 98%);
+        border: 0;
+        border-radius: 10px;
+        margin-right: 0;
+        text-align: center;
+        position: relative;
+        text-align: center;
+    }
+}
+/* Main End */
